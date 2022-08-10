@@ -14,3 +14,14 @@ This project uses `docker` and `docker-compose` to run all required services as 
 
 * `backend` contains the backend server code, written in Ruby on Rails.
 * `frontend` contains the front-end UI, written in React.
+
+## Getting Started
+
+TODO: Eventually docker-compose will start up the backend and frontend.
+
+backend:
+
+```
+cd backend
+docker-compose up -d
+```
