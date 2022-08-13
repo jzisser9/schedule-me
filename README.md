@@ -17,11 +17,15 @@ This project uses `docker` and `docker-compose` to run all required services as 
 
 ## Getting Started
 
-TODO: Eventually docker-compose will start up the backend and frontend.
-
-backend:
+Build the latest image and then run it using `docker compose`:
 
 ```
-cd backend
-docker-compose up -d
+docker compose build
+docker compose up -d
+```
+
+The various containers will run in the background. You can shut the app down with:
+
+```
+docker compose down
 ```
