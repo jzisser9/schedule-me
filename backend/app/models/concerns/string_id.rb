@@ -1,8 +1,9 @@
-class ApplicationRecord < ActiveRecord::Base
-  primary_abstract_class
-  before_save :generate_id
+module StringId
+  extend ActiveSupport::Concern
 
-  default_scope { order(created_at: :asc) }
+  included { before_save :generate_id }
+
+  private
 
   def generate_id
     self.id ||= loop do
