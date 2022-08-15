@@ -5,7 +5,7 @@ services:
     volumes:
       - ./db:/db
     environment:
-      POSTGRES_HOSTNAME: web
+      POSTGRES_HOSTNAME: backend
       POSTGRES_PASSWORD: password
   backend:
     build: ./backend
