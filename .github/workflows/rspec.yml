@@ -38,7 +38,7 @@ jobs:
           bundler-cache: true
       - name: Create DB
         run: |
-          bin/rails db:prepare
+          docker compose run backend rails db:prepare
       - name: Run tests
         run: |
           docker compose run backend bundle exec rspec
