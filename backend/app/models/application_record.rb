@@ -5,9 +5,6 @@ class ApplicationRecord < ActiveRecord::Base
   default_scope { order(created_at: :asc) }
 
   def generate_id
-    self.id ||= loop do
-      token = HumanToken.generate
-      break token unless self.class.exists?(id: token)
-    end
+    self.id ||= SecureRandom.uuid
   end
 end
